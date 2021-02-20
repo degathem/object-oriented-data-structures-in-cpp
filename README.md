@@ -27,8 +27,9 @@ int main() {
 - c++ header file - declares all member variables, declares all member functions. The names of what ourclass knows and does, but not how it does them
 - Header file is akin to an api
 - the top of a header file has #pragma once, instructs compiler to compiled once
-
+- h files are "header files". These usually have definitions of objects and declarations of global functions. Recently, some people name header files with a ".hpp" suffix instead.
 ### Header file (.h file)
+- Note the #pragma once at the beginning. Instructions beginning with # are special commands for the compiler, called preprocessor directives. This instruction prevents the header file from being automatically included multiple times in a complex project, which would cause errors.
 
 ``` c++
 // All header (.h) files start with "#pragma once":
@@ -47,9 +48,14 @@ class Cube {
     double length_;
 };
 
-}
+
 ```
-### cpp file
+### .cpp file (implementation file)
+
+
+- .cpp files are often called the "implementation files," or simply the "source files". This is where most function definitions and main program logic go.
+
+- In general, the header files contain declarations (where classes and custom types are listed by name and type, and function prototypes give functions a type signature) while the source files contain implementation (where function bodies are actually defined, and some constant values are initialized). It becomes easier to understand this organizational separation if you know more about how the code is compiled into a program you can run. 
 
 ``` c++
 #include <iostream>
